@@ -1,3 +1,4 @@
+/* General reset and base styles */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -13,15 +14,29 @@ body {
   padding: 2rem 0;
 }
 
+/* HERO SECTION */
 .hero {
-  background: url('assets/hero.png') no-repeat center center/cover;
+  background: url('assets/hero.jpg') no-repeat center center/cover;
   color: white;
   text-align: center;
-  padding: 5rem 1rem;
+  padding: 6rem 1rem;
+  position: relative;
+}
+
+.hero .container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
 }
 
 .hero h1 {
   font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .btn {
@@ -29,12 +44,13 @@ body {
   color: white;
   padding: 0.8rem 1.5rem;
   text-decoration: none;
+  border: none;
   border-radius: 5px;
   font-size: 1rem;
-  display: inline-block;
-  margin-top: 1rem;
+  cursor: pointer;
 }
 
+/* SECTIONS */
 section {
   padding: 2rem 0;
 }
@@ -45,12 +61,13 @@ ul {
 }
 
 ul li {
-  background: #e0f0ff;
+  background: #d8ecff;
   margin-bottom: 10px;
   padding: 0.75rem;
   border-left: 5px solid #0077cc;
 }
 
+/* TESTIMONIALS */
 .testimonials blockquote {
   font-style: italic;
   background: #fff;
@@ -59,6 +76,7 @@ ul li {
   margin: 1rem 0;
 }
 
+/* CALL TO ACTION */
 .cta form {
   display: flex;
   flex-direction: column;
@@ -71,11 +89,36 @@ ul li {
   padding: 0.75rem;
   margin-bottom: 1rem;
   font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
+.cta button {
+  background: #0077cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
   padding: 1rem;
   background: #333;
   color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
 }
