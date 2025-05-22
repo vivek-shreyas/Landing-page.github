@@ -1,0 +1,142 @@
+/* Reset and base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  color: #111;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Floating CTA: Play Game */
+.floating-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaf9ff;
+  padding: 3rem 0;
+}
+
+.btn-fish {
+  position: relative;
+  background-color: #00aaff;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 60px 40px 40px 60px / 50px 50px 50px 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-fish::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 0 20px 20px;
+  border-color: transparent transparent transparent #00aaff;
+}
+
+.btn-fish:hover {
+  background-color: #0077cc;
+}
+
+/* Section Layout */
+section {
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Benefits Section */
+.benefits ul {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits ul li {
+  margin: 0.5rem 0;
+  font-size: 1.05rem;
+}
+
+/* Testimonials */
+.testimonials blockquote {
+  font-style: italic;
+  background: #ffffff;
+  padding: 1rem;
+  border-left: 5px solid #0077cc;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+}
+
+/* CTA Form */
+.cta form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 2rem auto 0;
+}
+
+.cta input,
+.cta button {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.cta button {
+  background: #0077cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #222;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .btn-fish {
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+  }
+
+  .btn-fish::after {
+    border-width: 16px 0 16px 16px;
+    right: -16px;
+  }
+}
